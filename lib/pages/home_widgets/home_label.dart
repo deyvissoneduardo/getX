@@ -3,7 +3,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:getx_demo/controller/home_controller.dart';
 
 class HomeLabel extends StatelessWidget {
-  const HomeLabel({Key? key}) : super(key: key);
+  const HomeLabel({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
