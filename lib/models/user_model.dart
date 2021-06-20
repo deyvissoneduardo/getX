@@ -1,13 +1,15 @@
+import 'package:flutter/material.dart';
+
 class UserModel {
-  final int? id;
-  final String? email, fistName, lastName, avatar;
+  final int id;
+  final String email, fistName, lastName, avatar;
 
   UserModel({
-    required this.id,
-    required this.email,
-    required this.fistName,
-    required this.lastName,
-    required this.avatar,
+    @required this.id,
+    @required this.email,
+    @required this.fistName,
+    @required this.lastName,
+    @required this.avatar,
   });
 
   static UserModel fromJson(Map<String, dynamic> json) {

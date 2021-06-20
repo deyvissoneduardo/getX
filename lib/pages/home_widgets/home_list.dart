@@ -3,7 +3,7 @@ import 'package:get/state_manager.dart';
 import 'package:getx_demo/controller/home_controller.dart';
 
 class HomeList extends StatelessWidget {
-  const HomeList({Key? key}) : super(key: key);
+  const HomeList({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,9 @@ class HomeList extends StatelessWidget {
             itemBuilder: (context, index) {
               final user = _.users[index];
               return ListTile(
-                title: Text(user.fistName!),
-                subtitle: Text(user.email!),
+                title: Text(user.fistName),
+                subtitle: Text(user.email),
+                onTap: () => _.showUserProfile(user),
               );
             },
           );

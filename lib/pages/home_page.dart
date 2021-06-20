@@ -4,7 +4,7 @@ import 'package:getx_demo/controller/home_controller.dart';
 import 'package:getx_demo/pages/home_widgets/home_list.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
