@@ -40,10 +40,14 @@ class HomeController extends GetxController {
     update(['text'], _counter >= 5);
   }
 
-  showUserProfile(UserModel userModel) {
-    Get.to(
+  Future<void> showUserProfile(UserModel userModel) async {
+    final result = await Get.to<String>(
       () => const ProfilePage(),
       arguments: userModel,
     );
+    if (result != null) {
+      // ignore: avoid_print
+      print("😠  result $result");
+    }
   }
 }
