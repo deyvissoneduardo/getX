@@ -15,28 +15,13 @@ class ReactivePage extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(),
             body: Center(
-              child: Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Obx(() {
-                    // ignore: avoid_print
-                    print('reative text');
-                    return Text(
-                      _.counter.value.toString(),
-                      style: const TextStyle(fontSize: 30),
-                    );
-                  }),
-                  const SizedBox(height: 8),
-                  Obx(() {
-                    // ignore: avoid_print
-                    print('reative date');
-                    return Text(
-                      _.currentDate.value,
-                      style: const TextStyle(fontSize: 30),
-                    );
-                  }),
-                ],
-              ),
+              child: Obx(() => ListView(
+                    children: _.mapItens.values
+                        .map((e) => ListTile(
+                              title: Text(e),
+                            ))
+                        .toList(),
+                  )),
             ),
             floatingActionButton: Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -44,7 +29,8 @@ class ReactivePage extends StatelessWidget {
                 FloatingActionButton(
                   heroTag: 'add',
                   child: const Icon(Icons.add),
-                  onPressed: () => _.increment(),
+                  onPressed: () => _.addItem(),
+                  // onPressed: () => _.addMapItems(),
                 ),
                 const SizedBox(width: 10),
                 FloatingActionButton(
