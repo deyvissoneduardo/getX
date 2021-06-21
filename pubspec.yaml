@@ -1,7 +1,7 @@
 name: getx_demo
 description: A new Flutter project.
 
-publish_to: 'none' 
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -10,8 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  get: ^3.6.2
   dio: ^4.0.0
+  faker: ^2.0.0
+  get: ^3.6.2
 
 dev_dependencies:
   flutter_test:

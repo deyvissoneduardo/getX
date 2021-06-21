@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/state_manager.dart';
+import 'package:get/get.dart';
 import 'package:getx_demo/controller/reactive_controller.dart';
+import 'package:getx_demo/controller/socket_client_controller.dart';
 
 class ReactivePage extends StatelessWidget {
   const ReactivePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final controlle = Get.find<SocketClientController>();
     return GetBuilder<ReactiveController>(
         init: ReactiveController(),
         builder: (_) {
@@ -21,9 +23,14 @@ class ReactivePage extends StatelessWidget {
                     Obx(
                       () => Text('age ${_.myPet.age}'),
                     ),
+                    const SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: () => _.setPetAge(_.myPet.age + 1),
                       child: const Text('set age'),
+                    ),
+                    const SizedBox(height: 10),
+                    Obx(
+                      () => Text(controlle.message.value),
                     ),
                   ],
                 ),
