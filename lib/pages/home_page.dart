@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 import 'package:getx_demo/controller/home_controller.dart';
-import 'package:getx_demo/pages/home_widgets/home_list.dart';
+import 'package:getx_demo/widgets/produc_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -14,10 +14,9 @@ class HomePage extends StatelessWidget {
           // ignore: avoid_print
           print('build home');
           return Scaffold(
+            body: const ProducList(),
             // ignore: prefer_const_constructors
-            body: Center(
-              child: const HomeList(),
-            ),
+            // body: Center(child: const HomeList()),
             floatingActionButton: FloatingActionButton(
               onPressed: () => _.incrent(),
               child: const Icon(Icons.add),

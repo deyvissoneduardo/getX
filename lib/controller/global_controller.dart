@@ -28,4 +28,10 @@ class GlobalController extends GetxController {
     print('carregando lista de produtos');
     update(['products']);
   }
+
+  onFavorite(int index, bool isFavorite) {
+    ProductModel productModel = _products[index];
+    productModel.isFavorite = isFavorite;
+    update(['products']);
+  }
 }

@@ -4,7 +4,7 @@ class ProductModel {
   final int id;
   final String name, description;
   final double price, rate;
-  // bool isFavorite = false;
+  bool isFavorite = false;
 
   ProductModel({
     @required this.id,
