@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:getx_demo/controller/global_controller.dart';
 import 'package:getx_demo/pages/splash_page.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(GlobalController());
     return GetMaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(

@@ -20,7 +20,7 @@ class SplashController extends GetxController {
   @override
   void onClose() {
     // ignore: avoid_print
-    print('fechou');
+    print('fechou splash');
     super.onClose();
   }
 }

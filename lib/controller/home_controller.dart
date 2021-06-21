@@ -15,7 +15,7 @@ class HomeController extends GetxController {
   @override
   onInit() {
     // ignore: avoid_print
-    print('init state');
+    print('init state home');
     super.onInit();
   }
 
@@ -23,7 +23,7 @@ class HomeController extends GetxController {
   void onReady() {
     super.onReady();
     // ignore: avoid_print
-    print('carregou ready');
+    print('carregou ready home');
     loadUsers();
   }
 
