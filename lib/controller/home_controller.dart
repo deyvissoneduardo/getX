@@ -15,7 +15,7 @@ class HomeController extends GetxController {
   @override
   onInit() {
     // ignore: avoid_print
-    print('init state');
+    print('init state home');
     super.onInit();
   }
 
@@ -23,7 +23,7 @@ class HomeController extends GetxController {
   void onReady() {
     super.onReady();
     // ignore: avoid_print
-    print('carregou ready');
+    print('carregou ready home');
     loadUsers();
   }
 
@@ -40,10 +40,14 @@ class HomeController extends GetxController {
     update(['text'], _counter >= 5);
   }
 
-  showUserProfile(UserModel userModel) {
-    Get.to(
-      const ProfilePage(),
+  Future<void> showUserProfile(UserModel userModel) async {
+    final result = await Get.to<String>(
+      () => const ProfilePage(),
       arguments: userModel,
     );
+    if (result != null) {
+      // ignore: avoid_print
+      print("😠  result $result");
+    }
   }
 }
