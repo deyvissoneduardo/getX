@@ -13,7 +13,7 @@ class SplashController extends GetxController {
   void onReady() {
     super.onReady();
     Future.delayed(const Duration(seconds: 2), () {
-      Get.off(const HomePage(), transition: Transition.leftToRight);
+      Get.off(() => const HomePage(), transition: Transition.downToUp);
     });
   }
 

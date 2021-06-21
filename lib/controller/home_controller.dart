@@ -42,7 +42,7 @@ class HomeController extends GetxController {
 
   showUserProfile(UserModel userModel) {
     Get.to(
-      const ProfilePage(),
+      () => const ProfilePage(),
       arguments: userModel,
     );
   }
